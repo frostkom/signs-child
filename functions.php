@@ -1,6 +1,15 @@
 <?php
 
-add_action('wp_head', 'head_child', 0);
+if(is_admin())
+{
+
+}
+
+else
+{
+	add_action('wp_head', 'head_child', 0);
+}
+
 add_action('widgets_init', 'remove_some_widgets', 11);
 
 function head_child()
