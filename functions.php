@@ -1,11 +1,6 @@
 <?php
 
-if(is_admin())
-{
-
-}
-
-else
+if(!is_admin())
 {
 	add_action('wp_head', 'head_child', 0);
 }
@@ -23,6 +18,7 @@ function remove_some_widgets()
 	unregister_sidebar('widget_after_header');
 	unregister_sidebar('widget_slide');
 	unregister_sidebar('widget_front');
+	unregister_sidebar('widget_after_heading');
 	unregister_sidebar('widget_sidebar_left');
 	unregister_sidebar('widget_after_content');
 	unregister_sidebar('widget_sidebar');
