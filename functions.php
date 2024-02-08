@@ -9,7 +9,7 @@ add_action('widgets_init', 'remove_some_widgets', 11);
 
 function head_child()
 {
-	mf_enqueue_style('child-style', get_stylesheet_directory_uri()."/style.css", get_theme_version());
+	mf_enqueue_style('child_style', get_stylesheet_directory_uri()."/style.css", get_theme_version());
 }
 
 function remove_some_widgets()
